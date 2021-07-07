@@ -1,0 +1,25 @@
+<p>registration works!</p>
+<h2>Build signup Structure</h2>
+<form [formGroup]="registerForm" >
+  <label for="email">Email: </label>
+  <input id="email" type="text" formControlName="email" required>
+  <label for="password">Password: </label>
+  <input id="password" type="text" formControlName="password" required>
+  <div class="actions">
+    <button  type="submit" (click)="signup()" >Sign up</button>
+    <div class="separator">
+      <span>OR</span>
+    </div>
+    <button  routerLink="/login">Login</button>
+  </div>
+</form>
+<p>Form Value: {{ registerForm.value | json }}</p>
+
+<p>Form Status: {{ registerForm.status }}</p>
+<p>Email Form</p>
+<p>Password Form</p>
+<p>Make Password visible</p>
+<p>Disclose password constraints upfront.</p>
+<p>Display a strength meter</p>
+<p>Do not repeat fields</p>
+<p>Do not ask users to confirm their registration through email.</p>
